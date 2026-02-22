@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudentVerse Market</title>
+</head>
+<body style="margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#f0f2f5; color:#1a1a2e;">
+
+  <!-- ===== STICKY NAVBAR ===== -->
+  <nav style="position:sticky; top:0; z-index:1000; background:linear-gradient(135deg,#1a1a2e,#16213e); padding:0 40px; display:flex; align-items:center; justify-content:space-between; height:65px; box-shadow:0 4px 20px rgba(0,0,0,0.4);">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <span style="font-size:26px;">🎓</span>
+      <span style="color:#e94560; font-size:22px; font-weight:800; letter-spacing:1px;">StudentVerse</span>
+      <span style="color:#ffffff; font-size:22px; font-weight:300;">Market</span>
+    </div>
+    <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+      <a href="#home"    style="color:#ccc; text-decoration:none; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:500; transition:background 0.2s;">Home</a>
+      <a href="#shop"    style="color:#ccc; text-decoration:none; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:500;">Shop</a>
+      <a href="#categories" style="color:#ccc; text-decoration:none; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:500;">Categories</a>
+      <a href="#digital" style="color:#ccc; text-decoration:none; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:500;">Digital Market</a>
+      <a href="#deals"   style="color:#ccc; text-decoration:none; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:500;">Deals</a>
+      <a href="#about"   style="color:#ccc; text-decoration:none; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:500;">About</a>
+      <a href="#contact" style="color:#ffffff; text-decoration:none; padding:8px 18px; border-radius:20px; font-size:14px; font-weight:600; background:#e94560;">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== HOME SECTION ===== -->
+  <section id="home" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); min-height:90vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:60px 20px; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:60px; left:80px; width:200px; height:200px; background:rgba(233,69,96,0.1); border-radius:50%; filter:blur(60px);"></div>
+    <div style="position:absolute; bottom:80px; right:80px; width:250px; height:250px; background:rgba(15,52,96,0.4); border-radius:50%; filter:blur(80px);"></div>
+
+    <div style="background:rgba(233,69,96,0.15); border:1px solid rgba(233,69,96,0.4); color:#e94560; padding:8px 20px; border-radius:20px; font-size:13px; font-weight:600; letter-spacing:2px; margin-bottom:24px;">🚀 STUDENT-FIRST MARKETPLACE</div>
+
+    <h1 style="font-size:clamp(42px,7vw,80px); font-weight:900; color:#ffffff; margin:0 0 16px 0; line-height:1.1; letter-spacing:-1px;">
+      StudentVerse <span style="color:#e94560;">Market</span>
+    </h1>
+
+    <p style="font-size:clamp(16px,2.5vw,22px); color:#a0b4c8; font-weight:400; margin:0 0 32px 0; letter-spacing:3px; text-transform:uppercase;">
+      AI &nbsp;|&nbsp; Coding &nbsp;|&nbsp; Study Tools
+    </p>
+
+    <p style="max-width:580px; font-size:16px; color:#c0cfe0; line-height:1.8; margin:0 0 48px 0;">
+      Your one-stop digital marketplace built exclusively for students. Discover premium AI tools, curated coding project kits, affordable study essentials, and budget-friendly tech — all designed to supercharge your academic journey.
+    </p>
+
+    <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
+      <a href="#shop" style="background:#e94560; color:#fff; text-decoration:none; padding:16px 40px; border-radius:30px; font-size:16px; font-weight:700; box-shadow:0 8px 30px rgba(233,69,96,0.4);">🛒 Explore Shop</a>
+      <a href="#digital" style="background:transparent; color:#ffffff; text-decoration:none; padding:16px 40px; border-radius:30px; font-size:16px; font-weight:600; border:2px solid rgba(255,255,255,0.3);">⚡ Digital Market</a>
+    </div>
+
+    <div style="display:flex; gap:48px; margin-top:70px; flex-wrap:wrap; justify-content:center;">
+      <div style="text-align:center;">
+        <div style="font-size:32px; font-weight:800; color:#e94560;">500+</div>
+        <div style="font-size:13px; color:#8899aa; margin-top:4px;">Products</div>
+      </div>
+      <div style="width:1px; background:rgba(255,255,255,0.1);"></div>
+      <div style="text-align:center;">
+        <div style="font-size:32px; font-weight:800; color:#e94560;">10K+</div>
+        <div style="font-size:13px; color:#8899aa; margin-top:4px;">Students</div>
+      </div>
+      <div style="width:1px; background:rgba(255,255,255,0.1);"></div>
+      <div style="text-align:center;">
+        <div style="font-size:32px; font-weight:800; color:#e94560;">₹99</div>
+        <div style="font-size:13px; color:#8899aa; margin-top:4px;">Starting Price</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHOP SECTION ===== -->
+  <section id="shop" style="padding:80px 40px; background:#f0f2f5;">
+    <div style="text-align:center; margin-bottom:50px;">
+      <span style="background:#fde8ec; color:#e94560; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:700; letter-spacing:2px;">🛍️ OUR STORE</span>
+      <h2 style="font-size:40px; font-weight:800; color:#1a1a2e; margin:16px 0 8px;">Featured Products</h2>
+      <p style="color:#667788; font-size:16px; max-width:500px; margin:0 auto;">Hand-picked essentials every student needs to stay ahead</p>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:28px; justify-content:center; max-width:1200px; margin:0 auto;">
+
+      <!-- Card 1 -->
+      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08); transition:transform 0.2s;">
+        <div style="height:200px; background:linear-gradient(135deg,#667eea,#764ba2); display:flex; align-items:center; justify-content:center; font-size:64px; position:relative;">
+          🤖
+          <span style="position:absolute; top:12px; right:12px; background:#e94560; color:#fff; font-size:10px; font-weight:700; padding:4px 10px; border-radius:12px;">NEW</span>
+        </div>
+        <div style="padding:22px;">
+          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">AI Tools</p>
+          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">AI Study Assistant Pro</h3>
+          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">Smart notes, summaries & question-answer generation powered by AI.</p>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+            <div>
+              <span style="font-size:22px; font-weight:800; color:#e94560;">₹499</span>
+              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹999</span>
+            </div>
+            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">50% OFF</span>
+          </div>
+          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08);">
+        <div style="height:200px; background:linear-gradient(135deg,#f093fb,#f5576c); display:flex; align-items:center; justify-content:center; font-size:64px; position:relative;">
+          💻
+          <span style="position:absolute; top:12px; right:12px; background:#ff9800; color:#fff; font-size:10px; font-weight:700; padding:4px 10px; border-radius:12px;">HOT</span>
+        </div>
+        <div style="padding:22px;">
+          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Coding</p>
+          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">Full Stack Dev Bundle</h3>
+          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">HTML, CSS, JS, React & Node.js project templates with guides.</p>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+            <div>
+              <span style="font-size:22px; font-weight:800; color:#e94560;">₹799</span>
+              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹1499</span>
+            </div>
+            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">47% OFF</span>
+          </div>
+          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08);">
+        <div style="height:200px; background:linear-gradient(135deg,#4facfe,#00f2fe); display:flex; align-items:center; justify-content:center; font-size:64px; position:relative;">
+          📚
+        </div>
+        <div style="padding:22px;">
+          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Study</p>
+          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">Smart Study Kit 2026</h3>
+          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">Planner, flashcard deck, revision tracker & Pomodoro timer.</p>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+            <div>
+              <span style="font-size:22px; font-weight:800; color:#e94560;">₹299</span>
+              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹599</span>
+            </div>
+            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">50% OFF</span>
+          </div>
+          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08);">
+        <div style="height:200px; background:linear-gradient(135deg,#43e97b,#38f9d7); display:flex; align-items:center; justify-content:center; font-size:64px; position:relative;">
+          🔒
+          <span style="position:absolute; top:12px; right:12px; background:#1a1a2e; color:#fff; font-size:10px; font-weight:700; padding:4px 10px; border-radius:12px;">PRO</span>
+        </div>
+        <div style="padding:22px;">
+          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Security</p>
+          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">Cybersec Crash Course</h3>
+          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">Ethical hacking basics, CTF challenges & security labs.</p>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+            <div>
+              <span style="font-size:22px; font-weight:800; color:#e94560;">₹649</span>
+              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹1299</span>
+            </div>
+            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">50% OFF</span>
+          </div>
+          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08);">
+        <div style="height:200px; background:linear-gradient(135deg,#fa709a,#fee140); display:flex; align-items:center; justify-content:center; font-size:64px;">
+          📱
+        </div>
+        <div style="padding:22px;">
+          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Budget Tech</p>
+          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">Budget Earbuds X1</h3>
+          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">Noise-cancelling, 20hr battery — perfect for long study sessions.</p>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+            <div>
+              <span style="font-size:22px; font-weight:800; color:#e94560;">₹899</span>
+              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹1799</span>
+            </div>
+            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">50% OFF</span>
+          </div>
+          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES SECTION ===== -->
+  <section id="categories" style="padding:80px 40px; background:#ffffff;">
+    <div style="text-align:center; margin-bottom:50px;">
+      <span style="background:#fde8ec; color:#e94560; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:700; letter-spacing:2px;">📂 BROWSE</span>
+      <h2 style="font-size:40px; font-weight:800; color:#1a1a2e; margin:16px 0 8px;">Shop by Category</h2>
+      <p style="color:#667788; font-size:16px;">Find exactly what you need for your student life</p>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:24px; justify-content:center; max-width:1100px; margin:0 auto;">
+
+      <div style="background:linear-gradient(135deg,#1a1a2e,#16213e); border-radius:20px; width:240px; padding:36px 28px; text-align:center; cursor:pointer; box-shadow:0 8px 30px rgba(26,26,46,0.25);">
+        <div style="font-size:52px; margin-bottom:16px;">🤖</div>
+        <h3 style="color:#ffffff; font-size:20px; font-weight:700; margin:0 0 10px;">AI Tools</h3>
+        <p style="color:#8899bb; font-size:13px; line-height:1.6; margin:0 0 20px;">ChatGPT plugins, prompt packs, AI writing & research tools</p>
+        <span style="background:#e94560; color:#fff; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:600;">32 Products →</span>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#0f3460,#533483); border-radius:20px; width:240px; padding:36px 28px; text-align:center; cursor:pointer; box-shadow:0 8px 30px rgba(83,52,131,0.3);">
+        <div style="font-size:52px; margin-bottom:16px;">💻</div>
+        <h3 style="color:#ffffff; font-size:20px; font-weight:700; margin:0 0 10px;">Coding Projects</h3>
+        <p style="color:#aabbcc; font-size:13px; line-height:1.6; margin:0 0 20px;">Ready-to-submit academic projects, code templates & tools</p>
+        <span style="background:#e94560; color:#fff; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:600;">48 Products →</span>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#e94560,#c62a47); border-radius:20px; width:240px; padding:36px 28px; text-align:center; cursor:pointer; box-shadow:0 8px 30px rgba(233,69,96,0.35);">
+        <div style="font-size:52px; margin-bottom:16px;">📚</div>
+        <h3 style="color:#ffffff; font-size:20px; font-weight:700; margin:0 0 10px;">Study Essentials</h3>
+        <p style="color:#ffd0d8; font-size:13px; line-height:1.6; margin:0 0 20px;">Digital notes, planners, flashcards & exam prep guides</p>
+        <span style="background:#ffffff; color:#e94560; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:600;">61 Products →</span>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#11998e,#38ef7d); border-radius:20px; width:240px; padding:36px 28px; text-align:center; cursor:pointer; box-shadow:0 8px 30px rgba(17,153,142,0.3);">
+        <div style="font-size:52px; margin-bottom:16px;">⚡</div>
+        <h3 style="color:#ffffff; font-size:20px; font-weight:700; margin:0 0 10px;">Budget Tech</h3>
+        <p style="color:#d0fff7; font-size:13px; line-height:1.6; margin:0 0 20px;">Affordable gadgets, accessories & stationery for students</p>
+        <span style="background:#1a1a2e; color:#38ef7d; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:600;">27 Products →</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== DIGITAL MARKET SECTION ===== -->
+  <section id="digital" style="padding:80px 40px; background:linear-gradient(135deg,#1a1a2e,#16213e);">
+    <div style="text-align:center; margin-bottom:50px;">
+      <span style="background:rgba(233,69,96,0.2); color:#e94560; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:700; letter-spacing:2px; border:1px solid rgba(233,69,96,0.3);">⚡ DIGITAL</span>
+      <h2 style="font-size:40px; font-weight:800; color:#ffffff; margin:16px 0 8px;">Digital Market</h2>
+      <p style="color:#8899aa; font-size:16px;">Instant download products — no shipping, no wait</p>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:28px; justify-content:center; max-width:1100px; margin:0 auto;">
+
+      <!-- Python Project Kit -->
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); backdrop-filter:blur(10px); border-radius:20px; width:300px; padding:32px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-40px; right:-40px; width:120px; height:120px; background:rgba(233,69,96,0.15); border-radius:50%;"></div>
+        <div style="font-size:52px; margin-bottom:20px;">🐍</div>
+        <span style="background:rgba(233,69,96,0.2); color:#e94560; padding:4px 12px; border-radius:10px; font-size:11px; font-weight:700;">BESTSELLER</span>
+        <h3 style="color:#ffffff; font-size:22px; font-weight:700; margin:16px 0 12px;">Python Project Kit</h3>
+        <p style="color:#8899aa; font-size:14px; line-height:1.7; margin:0 0 20px;">10 complete Python projects with source code, documentation & viva Q&amp;A. Perfect for BCA, MCA &amp; B.Tech students.</p>
+        <ul style="list-style:none; padding:0; margin:0 0 24px;">
+          <li style="color:#aabbcc; font-size:13px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.07);">✅ &nbsp;Source code + README</li>
+          <li style="color:#aabbcc; font-size:13px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.07);">✅ &nbsp;PPT presentation included</li>
+          <li style="color:#aabbcc; font-size:13px; padding:6px 0;">✅ &nbsp;Instant ZIP download</li>
+        </ul>
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;">
+          <div>
+            <span style="font-size:28px; font-weight:800; color:#e94560;">₹399</span>
+            <span style="font-size:14px; color:#667; text-decoration:line-through; margin-left:8px;">₹799</span>
+          </div>
+          <span style="background:#e8f5e9; color:#2e7d32; font-size:12px; font-weight:700; padding:5px 12px; border-radius:10px;">50% OFF</span>
+        </div>
+        <button style="width:100%; padding:14px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:12px; font-size:15px; font-weight:700; cursor:pointer;">⬇️ Buy &amp; Download</button>
+      </div>
+
+      <!-- Cybersecurity Starter Pack -->
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:20px; width:300px; padding:32px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-40px; right:-40px; width:120px; height:120px; background:rgba(67,233,176,0.1); border-radius:50%;"></div>
+        <div style="font-size:52px; margin-bottom:20px;">🔐</div>
+        <span style="background:rgba(67,233,176,0.15); color:#43e9b0; padding:4px 12px; border-radius:10px; font-size:11px; font-weight:700;">TRENDING</span>
+        <h3 style="color:#ffffff; font-size:22px; font-weight:700; margin:16px 0 12px;">Cybersecurity Starter Pack</h3>
+        <p style="color:#8899aa; font-size:14px; line-height:1.7; margin:0 0 20px;">Beginner to intermediate ethical hacking guide, CTF write-ups, tool cheat sheets &amp; lab setup instructions.</p>
+        <ul style="list-style:none; padding:0; margin:0 0 24px;">
+          <li style="color:#aabbcc; font-size:13px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.07);">✅ &nbsp;Kali Linux setup guide</li>
+          <li style="color:#aabbcc; font-size:13px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.07);">✅ &nbsp;Top 50 tools cheat sheet</li>
+          <li style="color:#aabbcc; font-size:13px; padding:6px 0;">✅ &nbsp;CTF practice challenges</li>
+        </ul>
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;">
+          <div>
+            <span style="font-size:28px; font-weight:800; color:#43e9b0;">₹549</span>
+            <span style="font-size:14px; color:#667; text-decoration:line-through; margin-left:8px;">₹999</span>
+          </div>
+          <span style="background:#e8f5e9; color:#2e7d32; font-size:12px; font-weight:700; padding:5px 12px; border-radius:10px;">45% OFF</span>
+        </div>
+        <button style="width:100%; padding:14px; background:linear-gradient(135deg,#11998e,#38ef7d); color:#1a1a2e; border:none; border-radius:12px; font-size:15px; font-weight:700; cursor:pointer;">⬇️ Buy &amp; Download</button>
+      </div>
+
+      <!-- Portfolio Template -->
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:20px; width:300px; padding:32px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-40px; right:-40px; width:120px; height:120px; background:rgba(102,126,234,0.15); border-radius:50%;"></div>
+        <div style="font-size:52px; margin-bottom:20px;">🎨</div>
+        <span style="background:rgba(102,126,234,0.2); color:#8b9fee; padding:4px 12px; border-radius:10px; font-size:11px; font-weight:700;">POPULAR</span>
+        <h3 style="color:#ffffff; font-size:22px; font-weight:700; margin:16px 0 12px;">Portfolio Template</h3>
+        <p style="color:#8899aa; font-size:14px; line-height:1.7; margin:0 0 20px;">Modern responsive developer portfolio built with HTML, CSS &amp; JS. Just plug in your details and go live.</p>
+        <ul style="list-style:none; padding:0; margin:0 0 24px;">
+          <li style="color:#aabbcc; font-size:13px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.07);">✅ &nbsp;5 colour theme variants</li>
+          <li style="color:#aabbcc; font-size:13px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.07);">✅ &nbsp;Fully responsive design</li>
+          <li style="color:#aabbcc; font-size:13px; padding:6px 0;">✅ &nbsp;1-page &amp; multi-page versions</li>
+        </ul>
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;">
+          <div>
+            <span style="font-size:28px; font-weight:800; color:#8b9fee;">₹199</span>
+            <span style="font-size:14px; color:#667; text-decoration:line-through; margin-left:8px;">₹499</span>
+          </div>
+          <span style="background:#e8f5e9; color:#2e7d32; font-size:12px; font-weight:700; padding:5px 12px; border-radius:10px;">60% OFF</span>
+        </div>
+        <button style="width:100%; padding:14px; background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; border:none; border-radius:12px; font-size:15px; font-weight:700; cursor:pointer;">⬇️ Buy &amp; Download</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== DEALS SECTION ===== -->
+  <section id="deals" style="padding:80px 40px; background:#fff8f9;">
+    <div style="text-align:center; margin-bottom:50px;">
+      <span style="background:#fde8ec; color:#e94560; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:700; letter-spacing:2px;">🏷️ SAVE MORE</span>
+      <h2 style="font-size:40px; font-weight:800; color:#1a1a2e; margin:16px 0 8px;">Student Deals</h2>
+      <p style="color:#667788; font-size:16px;">Curated price drops — because every rupee counts</p>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; max-width:1100px; margin:0 auto;">
+
+      <div style="background:linear-gradient(135deg,#e94560,#c62a47); border-radius:20px; width:200px; padding:36px 20px; text-align:center; box-shadow:0 8px 30px rgba(233,69,96,0.35); cursor:pointer;">
+        <div style="font-size:40px; margin-bottom:12px;">💰</div>
+        <div style="color:#ffd6de; font-size:13px; font-weight:600; margin-bottom:6px;">Everything</div>
+        <div style="color:#ffffff; font-size:30px; font-weight:900; line-height:1;">Under</div>
+        <div style="color:#ffffff; font-size:42px; font-weight:900; line-height:1.1;">₹99</div>
+        <div style="background:rgba(255,255,255,0.2); color:#fff; margin-top:16px; padding:8px 16px; border-radius:20px; font-size:12px; font-weight:700;">Shop Now →</div>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#0f3460,#533483); border-radius:20px; width:200px; padding:36px 20px; text-align:center; box-shadow:0 8px 30px rgba(83,52,131,0.35); cursor:pointer;">
+        <div style="font-size:40px; margin-bottom:12px;">⚡</div>
+        <div style="color:#c4b5fd; font-size:13px; font-weight:600; margin-bottom:6px;">Best Value</div>
+        <div style="color:#ffffff; font-size:30px; font-weight:900; line-height:1;">Under</div>
+        <div style="color:#ffffff; font-size:42px; font-weight:900; line-height:1.1;">₹299</div>
+        <div style="background:rgba(255,255,255,0.2); color:#fff; margin-top:16px; padding:8px 16px; border-radius:20px; font-size:12px; font-weight:700;">Shop Now →</div>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#11998e,#38ef7d); border-radius:20px; width:200px; padding:36px 20px; text-align:center; box-shadow:0 8px 30px rgba(17,153,142,0.35); cursor:pointer;">
+        <div style="font-size:40px; margin-bottom:12px;">🎯</div>
+        <div style="color:#d0fff0; font-size:13px; font-weight:600; margin-bottom:6px;">Premium Pick</div>
+        <div style="color:#1a1a2e; font-size:30px; font-weight:900; line-height:1;">Under</div>
+        <div style="color:#1a1a2e; font-size:42px; font-weight:900; line-height:1.1;">₹599</div>
+        <div style="background:rgba(26,26,46,0.2); color:#1a1a2e; margin-top:16px; padding:8px 16px; border-radius:20px; font-size:12px; font-weight:700;">Shop Now →</div>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#fa709a,#fee140); border-radius:20px; width:200px; padding:36px 20px; text-align:center; box-shadow:0 8px 30px rgba(250,112,154,0.35); cursor:pointer;">
+        <div style="font-size:40px; margin-bottom:12px;">🚀</div>
+        <div style="color:#fff3cd; font-size:13px; font-weight:600; margin-bottom:6px;">Pro Bundle</div>
+        <div style="color:#fff; font-size:30px; font-weight:900; line-height:1;">Under</div>
+        <div style="color:#fff; font-size:42px; font-weight:900; line-height:1.1;">₹999</div>
+        <div style="background:rgba(255,255,255,0.25); color:#fff; margin-top:16px; padding:8px 16px; border-radius:20px; font-size:12px; font-weight:700;">Shop Now →</div>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#667eea,#764ba2); border-radius:20px; width:200px; padding:36px 20px; text-align:center; box-shadow:0 8px 30px rgba(102,126,234,0.35); cursor:pointer;">
+        <div style="font-size:40px; margin-bottom:12px;">🎓</div>
+        <div style="color:#ddd6fe; font-size:13px; font-weight:600; margin-bottom:6px;">Student Max</div>
+        <div style="color:#ffffff; font-size:30px; font-weight:900; line-height:1;">Under</div>
+        <div style="color:#ffffff; font-size:42px; font-weight:900; line-height:1.1;">₹1499</div>
+        <div style="background:rgba(255,255,255,0.2); color:#fff; margin-top:16px; padding:8px 16px; border-radius:20px; font-size:12px; font-weight:700;">Shop Now →</div>
+      </div>
+
+    </div>
+
+    <!-- Flash Sale Banner -->
+    <div style="max-width:800px; margin:48px auto 0; background:linear-gradient(135deg,#1a1a2e,#0f3460); border-radius:20px; padding:32px 40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; border:1px solid rgba(233,69,96,0.3);">
+      <div>
+        <div style="color:#e94560; font-size:12px; font-weight:700; letter-spacing:2px; margin-bottom:8px;">🔥 FLASH SALE — LIMITED TIME</div>
+        <div style="color:#ffffff; font-size:26px; font-weight:800;">Extra 20% OFF on all bundles</div>
+        <div style="color:#8899aa; font-size:14px; margin-top:6px;">Use code: <span style="color:#e94560; font-weight:700; background:rgba(233,69,96,0.1); padding:2px 10px; border-radius:6px; font-family:monospace;">STUDENT20</span> at checkout</div>
+      </div>
+      <button style="background:#e94560; color:#fff; border:none; padding:16px 36px; border-radius:30px; font-size:15px; font-weight:700; cursor:pointer; white-space:nowrap;">Claim Offer →</button>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" style="padding:80px 40px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; align-items:center; gap:60px; flex-wrap:wrap;">
+
+      <div style="flex:1; min-width:280px;">
+        <span style="background:#fde8ec; color:#e94560; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:700; letter-spacing:2px;">👋 OUR STORY</span>
+        <h2 style="font-size:40px; font-weight:800; color:#1a1a2e; margin:20px 0 20px; line-height:1.2;">Built by a Student,<br/><span style="color:#e94560;">for Students</span></h2>
+        <p style="color:#556677; font-size:16px; line-height:1.9; margin:0 0 20px;">
+          StudentVerse Market was founded with a single mission — to make premium learning resources accessible to every student in India, without burning a hole in their pocket.
+        </p>
+        <p style="color:#556677; font-size:16px; line-height:1.9; margin:0 0 20px;">
+          We curate, build and sell digital products like coding project kits, AI-powered study tools, cybersecurity guides and budget tech accessories — all tailored for college students navigating the real world of tech.
+        </p>
+        <p style="color:#556677; font-size:16px; line-height:1.9; margin:0 0 32px;">
+          Whether you're a first-year student looking to build your first project or a final-year student preparing for campus placements, StudentVerse Market is your trusted companion.
+        </p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="#shop" style="background:#e94560; color:#fff; text-decoration:none; padding:14px 32px; border-radius:30px; font-size:14px; font-weight:700;">Start Shopping</a>
+          <a href="#contact" style="background:#f0f2f5; color:#1a1a2e; text-decoration:none; padding:14px 32px; border-radius:30px; font-size:14px; font-weight:700;">Get in Touch</a>
+        </div>
+      </div>
+
+      <div style="flex:1; min-width:280px; display:flex; flex-direction:column; gap:20px;">
+
+        <div style="background:#f8f9ff; border-radius:16px; padding:24px; display:flex; gap:20px; align-items:flex-start; border-left:4px solid #e94560;">
+          <span style="font-size:36px;">🎯</span>
+          <div>
+            <h4 style="margin:0 0 8px; color:#1a1a2e; font-size:17px; font-weight:700;">Our Mission</h4>
+            <p style="margin:0; color:#667788; font-size:14px; line-height:1.7;">Democratise access to quality learning tools for students from all backgrounds across India.</p>
+          </div>
+        </div>
+
+        <div style="background:#f8f9ff; border-radius:16px; padding:24px; display:flex; gap:20px; align-items:flex-start; border-left:4px solid #0f3460;">
+          <span style="font-size:36px;">💡</span>
+          <div>
+            <h4 style="margin:0 0 8px; color:#1a1a2e; font-size:17px; font-weight:700;">Our Vision</h4>
+            <p style="margin:0; color:#667788; font-size:14px; line-height:1.7;">To become India's #1 student marketplace where learning meets affordability and innovation.</p>
+          </div>
+        </div>
+
+        <div style="background:#f8f9ff; border-radius:16px; padding:24px; display:flex; gap:20px; align-items:flex-start; border-left:4px solid #11998e;">
+          <span style="font-size:36px;">🤝</span>
+          <div>
+            <h4 style="margin:0 0 8px; color:#1a1a2e; font-size:17px; font-weight:700;">Community First</h4>
+            <p style="margin:0; color:#667788; font-size:14px; line-height:1.7;">10,000+ students already trust us. Join a growing community of learners, builders and creators.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" style="padding:80px 40px; background:linear-gradient(135deg,#1a1a2e,#16213e);">
+    <div style="text-align:center; margin-bottom:50px;">
+      <span style="background:rgba(233,69,96,0.2); color:#e94560; padding:6px 18px; border-radius:20px; font-size:12px; font-weight:700; letter-spacing:2px; border:1px solid rgba(233,69,96,0.3);">📬 REACH US</span>
+      <h2 style="font-size:40px; font-weight:800; color:#ffffff; margin:16px 0 8px;">Get in Touch</h2>
+      <p style="color:#8899aa; font-size:16px;">We're always here to help — reach out anytime</p>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:28px; justify-content:center; max-width:1000px; margin:0 auto;">
+
+      <!-- Phone -->
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:20px; width:200px; padding:36px 24px; text-align:center; cursor:pointer;">
+        <div style="width:60px; height:60px; background:linear-gradient(135deg,#e94560,#c62a47); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:26px; margin:0 auto 20px;">📞</div>
+        <h4 style="color:#ffffff; font-size:15px; font-weight:700; margin:0 0 8px;">Phone</h4>
+        <a href="tel:8904854754" style="color:#e94560; text-decoration:none; font-size:16px; font-weight:600;">8904854754</a>
+      </div>
+
+      <!-- Email -->
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:20px; width:240px; padding:36px 24px; text-align:center; cursor:pointer;">
+        <div style="width:60px; height:60px; background:linear-gradient(135deg,#667eea,#764ba2); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:26px; margin:0 auto 20px;">📧</div>
+        <h4 style="color:#ffffff; font-size:15px; font-weight:700; margin:0 0 8px;">Email</h4>
+        <a href="mailto:aryankarna79@gmail.com" style="color:#8b9fee; text-decoration:none; font-size:14px; font-weight:500; word-break:break-all;">aryankarna79@gmail.com</a>
+      </div>
+
+      <!-- LinkedIn -->
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:20px; width:200px; padding:36px 24px; text-align:center; cursor:pointer;">
+        <div style="width:60px; height:60px; background:linear-gradient(135deg,#0077b5,#005885); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:26px; margin:0 auto 20px;">💼</div>
+        <h4 style="color:#ffffff; font-size:15px; font-weight:700; margin:0 0 8px;">LinkedIn</h4>
+        <a href="https://linkedin.com/in/aryan-karna" target="_blank" style="color:#4fc3f7; text-decoration:none; font-size:14px; font-weight:500;">@aryan-karna</a>
+      </div>
+
+      <!-- Instagram -->
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:20px; width:200px; padding:36px 24px; text-align:center; cursor:pointer;">
+        <div style="width:60px; height:60px; background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:26px; margin:0 auto 20px;">📸</div>
+        <h4 style="color:#ffffff; font-size:15px; font-weight:700; margin:0 0 8px;">Instagram</h4>
+        <a href="https://instagram.com/aryan_karna" target="_blank" style="color:#f48fb1; text-decoration:none; font-size:14px; font-weight:500;">@aryan_karna</a>
+      </div>
+
+    </div>
+
+    <!-- Contact CTA -->
+    <div style="max-width:600px; margin:50px auto 0; text-align:center; background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.25); border-radius:20px; padding:40px;">
+      <div style="font-size:40px; margin-bottom:16px;">💬</div>
+      <h3 style="color:#ffffff; font-size:22px; font-weight:700; margin:0 0 12px;">Have a custom requirement?</h3>
+      <p style="color:#8899aa; font-size:15px; line-height:1.7; margin:0 0 24px;">Need a custom project, bulk order, or college collaboration? Drop a message — we'll respond within 24 hours.</p>
+      <a href="mailto:aryankarna79@gmail.com" style="background:#e94560; color:#fff; text-decoration:none; padding:14px 36px; border-radius:30px; font-size:15px; font-weight:700; display:inline-block;">✉️ Send a Message</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#0d0d1a; padding:48px 40px 24px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1100px; margin:0 auto;">
+
+      <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; margin-bottom:40px;">
+
+        <div style="max-width:280px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+            <span style="font-size:24px;">🎓</span>
+            <span style="color:#e94560; font-size:20px; font-weight:800;">StudentVerse</span>
+            <span style="color:#ffffff; font-size:20px; font-weight:300;">Market</span>
+          </div>
+          <p style="color:#667788; font-size:14px; line-height:1.8; margin:0;">India's student-first digital marketplace. Premium tools, lowest prices, instant downloads.</p>
+        </div>
+
+        <div>
+          <h4 style="color:#ffffff; font-size:14px; font-weight:700; margin:0 0 16px; text-transform:uppercase; letter-spacing:1px;">Quick Links</h4>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <a href="#home"       style="color:#8899aa; text-decoration:none; font-size:14px;">Home</a>
+            <a href="#shop"       style="color:#8899aa; text-decoration:none; font-size:14px;">Shop</a>
+            <a href="#categories" style="color:#8899aa; text-decoration:none; font-size:14px;">Categories</a>
+            <a href="#digital"    style="color:#8899aa; text-decoration:none; font-size:14px;">Digital Market</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="color:#ffffff; font-size:14px; font-weight:700; margin:0 0 16px; text-transform:uppercase; letter-spacing:1px;">Support</h4>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <a href="#deals"   style="color:#8899aa; text-decoration:none; font-size:14px;">Student Deals</a>
+            <a href="#about"   style="color:#8899aa; text-decoration:none; font-size:14px;">About Us</a>
+            <a href="#contact" style="color:#8899aa; text-decoration:none; font-size:14px;">Contact</a>
+            <a href="mailto:aryankarna79@gmail.com" style="color:#8899aa; text-decoration:none; font-size:14px;">Help Center</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="color:#ffffff; font-size:14px; font-weight:700; margin:0 0 16px; text-transform:uppercase; letter-spacing:1px;">Follow Us</h4>
+          <div style="display:flex; gap:12px;">
+            <a href="https://linkedin.com/in/aryan-karna" target="_blank" style="width:42px; height:42px; background:#0077b5; border-radius:10px; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:18px;">💼</a>
+            <a href="https://instagram.com/aryan_karna" target="_blank" style="width:42px; height:42px; background:linear-gradient(135deg,#f09433,#dc2743,#bc1888); border-radius:10px; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:18px;">📸</a>
+            <a href="mailto:aryankarna79@gmail.com" style="width:42px; height:42px; background:#e94560; border-radius:10px; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:18px;">📧</a>
+          </div>
+          <div style="margin-top:20px; background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.2); border-radius:12px; padding:14px 16px;">
+            <div style="color:#aabbcc; font-size:12px; margin-bottom:4px;">Flash Sale Code</div>
+            <div style="color:#e94560; font-size:16px; font-weight:700; font-family:monospace; letter-spacing:2px;">STUDENT20</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.07); padding-top:24px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;">
+        <p style="color:#445566; font-size:14px; margin:0;">© 2026 <span style="color:#e94560; font-weight:600;">StudentVerse Market</span> | Designed by <span style="color:#8b9fee; font-weight:600;">Aryan Karna</span></p>
+        <div style="display:flex; gap:20px;">
+          <a href="#" style="color:#445566; text-decoration:none; font-size:13px;">Privacy Policy</a>
+          <a href="#" style="color:#445566; text-decoration:none; font-size:13px;">Terms of Use</a>
+          <a href="#" style="color:#445566; text-decoration:none; font-size:13px;">Refund Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
