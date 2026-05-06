@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Hub - Event Handling Navigation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <span class="brand-icon">⚡</span>
+                <span class="brand-text">Event Hub</span>
+                <span class="version">v1.0</span>
+            </div>
+            <div class="navbar-actions">
+                <button class="navbar-btn" id="checkUrlsBtn" title="Check connection status (Alt+C)">
+                    🔗 Check Status
+                </button>
+                <button class="navbar-btn" id="helpBtn" title="Keyboard shortcuts (Alt+H)">
+                    ❓ Help
+                </button>
+                <button class="navbar-btn" id="historyBtn" title="Recent navigations">
+                    📋 History
+                </button>
+                <button class="navbar-btn" id="settingsBtn" title="Settings (Alt+S)">
+                    ⚙️ Settings
+                </button>
+            </div>
+            <div class="navbar-info">
+                <span class="status-indicator" id="systemStatus">● Online</span>
+                <span class="time-display" id="timeDisplay"></span>
+            </div>
+        </nav>
+
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">Event Handling Navigation System</h1>
+                <p class="subtitle">Professional event-driven project navigation with real-time tracking</p>
+                <div class="keyboard-hints">
+                    <span class="hint"><kbd>Alt</kbd>+<kbd>E</kbd> E-Commerce</span>
+                    <span class="hint"><kbd>Alt</kbd>+<kbd>P</kbd> Portfolio</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Statistics Dashboard -->
+            <section class="stats-dashboard">
+                <div class="stat-card">
+                    <div class="stat-value" id="eventCount">0</div>
+                    <div class="stat-label">Events Tracked</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="navigationCount">0</div>
+                    <div class="stat-label">Navigations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="uptime">0.0s</div>
+                    <div class="stat-label">System Uptime</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="listeners">4</div>
+                    <div class="stat-label">Event Listeners</div>
+                </div>
+            </section>
+
+            <!-- Projects Grid -->
+            <section class="projects-section">
+                <h2 class="section-title">Available Projects</h2>
+                <div class="projects-grid">
+                    <!-- E-Commerce Project Card -->
+                    <article class="project-card" data-project="ecommerce">
+                        <div class="card-header">
+                            <div class="card-icon">🛍️</div>
+                            <div class="card-meta">
+                                <h3>E-Commercial</h3>
+                                <span class="project-tag">HTML • CSS • Responsive</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <p class="project-description">
+                                Explore our modern e-commerce platform with HTML and CSS responsive design. Features product showcase, shopping cart, and checkout flow.
+                            </p>
+                            <div class="project-specs">
+                                <span class="spec">📱 Responsive</span>
+                                <span class="spec">⚡ Fast</span>
+                                <span class="spec">♿ Accessible</span>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <button class="btn btn-primary" id="ecommerce-btn" data-url="http://127.0.0.1:5500/E-Commercial-HTML&CSS/index.html">
+                                <span class="btn-text">Visit Project</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            <span class="shortcut-hint">Alt+E</span>
+                        </div>
+                    </article>
+
+                    <!-- Portfolio Project Card -->
+                    <article class="project-card" data-project="portfolio">
+                        <div class="card-header">
+                            <div class="card-icon">💼</div>
+                            <div class="card-meta">
+                                <h3>Portfolio</h3>
+                                <span class="project-tag">HTML • CSS • Professional</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <p class="project-description">
+                                View professional portfolio showcasing skills, projects, and experience. Clean, modern design with smooth animations and interactive elements.
+                            </p>
+                            <div class="project-specs">
+                                <span class="spec">🎨 Modern Design</span>
+                                <span class="spec">✨ Smooth</span>
+                                <span class="spec">📊 Interactive</span>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <button class="btn btn-secondary" id="portfolio-btn" data-url="http://127.0.0.1:5500/Portfolio-HTML&CSS/aryan-karna-portfolio.html">
+                                <span class="btn-text">Visit Project</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            <span class="shortcut-hint">Alt+P</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Event Tracking Section -->
+            <section class="tracking-section">
+                <div class="tracking-header">
+                    <h2 class="section-title">Event Tracking Console</h2>
+                    <div class="tracking-controls">
+                        <button class="btn-icon" id="clearLogsBtn" title="Clear event log">
+                            🗑️ Clear
+                        </button>
+                        <button class="btn-icon" id="pauseLogsBtn" title="Pause event log">
+                            ⏸️ Pause
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="log-container" id="eventLog">
+                    <div class="log-entry info">
+                        <span class="log-time">00:00:00</span>
+                        <span class="log-type">INIT</span>
+                        <span class="log-message">Event Handling System Initialized</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- System Information -->
+            <section class="system-info">
+                <div class="info-card">
+                    <h3>🔧 System Configuration</h3>
+                    <ul>
+                        <li><strong>Event Listeners:</strong> <span id="listenerInfo">4 active</span></li>
+                        <li><strong>Keyboard Shortcuts:</strong> <span id="shortcutInfo">2 configured</span></li>
+                        <li><strong>Logging Status:</strong> <span id="loggingStatus" class="status-badge success">Active</span></li>
+                        <li><strong>Performance:</strong> <span id="perfStatus" class="status-badge success">Optimal</span></li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>📡 Connection Status</h3>
+                    <ul>
+                        <li><strong>E-Commerce:</strong> <span class="status-badge success">Ready</span></li>
+                        <li><strong>Portfolio:</strong> <span class="status-badge success">Ready</span></li>
+                        <li><strong>Local Server:</strong> <span class="status-badge success">Port 5500</span></li>
+                        <li><strong>System Health:</strong> <span class="status-badge success">100%</span></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Quick Settings Panel -->
+        <aside class="settings-panel" id="settingsPanel">
+            <div class="settings-header">
+                <h3>⚙️ Quick Settings</h3>
+                <button class="close-btn" id="closeSettings">✕</button>
+            </div>
+            <div class="settings-content">
+                <div class="setting-item">
+                    <label for="themeToggle">🌙 Dark Mode</label>
+                    <input type="checkbox" id="themeToggle" class="toggle-switch">
+                </div>
+                <div class="setting-item">
+                    <label for="notificationToggle">🔔 Notifications</label>
+                    <input type="checkbox" id="notificationToggle" class="toggle-switch" checked>
+                </div>
+                <div class="setting-item">
+                    <label for="autoCheckToggle">🔄 Auto Check URLs</label>
+                    <input type="checkbox" id="autoCheckToggle" class="toggle-switch" checked>
+                </div>
+                <div class="setting-item">
+                    <label for="detailedLogsToggle">📝 Detailed Logs</label>
+                    <input type="checkbox" id="detailedLogsToggle" class="toggle-switch">
+                </div>
+                <hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border-color);">
+                <div class="settings-actions">
+                    <button class="btn-sm" id="exportLogsBtn">💾 Export Logs</button>
+                    <button class="btn-sm" id="resetStatsBtn">🔄 Reset Stats</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Shortcuts Help Modal -->
+        <div class="modal-overlay" id="shortcutsModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>⌨️ Keyboard Shortcuts</h2>
+                    <button class="close-btn" id="closeModal">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="shortcut-item">
+                        <kbd>Alt</kbd> + <kbd>E</kbd>
+                        <span>Navigate to E-Commerce</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Alt</kbd> + <kbd>P</kbd>
+                        <span>Navigate to Portfolio</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Alt</kbd> + <kbd>H</kbd>
+                        <span>Show this help</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Alt</kbd> + <kbd>S</kbd>
+                        <span>Toggle settings</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Alt</kbd> + <kbd>C</kbd>
+                        <span>Check URLs status</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Ctrl</kbd> + <kbd>L</kbd>
+                        <span>Clear event log</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="closeModalBtn">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification Container -->
+        <div class="notifications-container" id="notificationsContainer"></div>
+
+        <!-- Connection Status Modal -->
+        <div class="modal-overlay" id="connectionModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>🔗 Connection Status</h2>
+                    <button class="close-btn" id="closeConnectionModal">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="connection-item" id="ecommerceConnection">
+                        <div class="connection-name">E-Commerce</div>
+                        <div class="connection-status checking">Checking...</div>
+                        <div class="connection-url">http://127.0.0.1:5500/E-Commercial-HTML&CSS/index.html</div>
+                    </div>
+                    <div class="connection-item" id="portfolioConnection">
+                        <div class="connection-name">Portfolio</div>
+                        <div class="connection-status checking">Checking...</div>
+                        <div class="connection-url">http://127.0.0.1:5500/Portfolio-HTML&CSS/aryan-karna-portfolio.html</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Navigations Panel -->
+        <div class="modal-overlay" id="historyModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>📋 Recent Navigations</h2>
+                    <button class="close-btn" id="closeHistoryModal">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div id="recentNavigationsList" class="navigation-list">
+                        <p style="color: var(--text-light); text-align: center;">No recent navigations yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+            <p>Redirecting...</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">⚡ Event Handling Navigation System • Professional Developer Hub</p>
+                <p class="footer-meta">© 2026 • v1.0 • Built with Pure JavaScript & CSS3</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

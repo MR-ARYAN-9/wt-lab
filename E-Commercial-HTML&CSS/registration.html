@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - StudentVerse Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-box registration-box">
+            <!-- Logo -->
+            <div class="auth-header">
+                <span class="logo-emoji">🎓</span>
+                <h1 class="logo-text">StudentVerse <span class="logo-highlight">Market</span></h1>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form-container">
+                <h2 class="form-title">Join Our Community!</h2>
+                <p class="form-subtitle">Create an account to access exclusive student deals</p>
+
+                <form id="registrationForm" class="auth-form" novalidate>
+                    <!-- Full Name Field -->
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">👤 Full Name</label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            class="form-input" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="registerEmail" class="form-label">📧 Email Address</label>
+                        <input 
+                            type="email" 
+                            id="registerEmail" 
+                            class="form-input" 
+                            placeholder="Enter your email"
+                            required
+                        >
+                        <span class="error-message" id="registerEmailError"></span>
+                    </div>
+
+                    <!-- Phone Number Field -->
+                    <div class="form-group">
+                        <label for="phone" class="form-label">📱 Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            class="form-input" 
+                            placeholder="Enter your phone number"
+                            required
+                        >
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <!-- College/University Field -->
+                    <div class="form-group">
+                        <label for="college" class="form-label">🏫 College/University</label>
+                        <input 
+                            type="text" 
+                            id="college" 
+                            class="form-input" 
+                            placeholder="Enter your college name"
+                            required
+                        >
+                        <span class="error-message" id="collegeError"></span>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="registerPassword" class="form-label">🔐 Password</label>
+                        <input 
+                            type="password" 
+                            id="registerPassword" 
+                            class="form-input" 
+                            placeholder="Create a strong password (min 6 characters)"
+                            required
+                        >
+                        <span class="error-message" id="registerPasswordError"></span>
+                        <div class="password-strength" id="passwordStrength"></div>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">🔐 Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            class="form-input" 
+                            placeholder="Re-enter your password"
+                            required
+                        >
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+
+                    <!-- Terms & Conditions -->
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="termsCheckbox" required>
+                            <span>I agree to the <a href="#" class="terms-link">Terms & Conditions</a> and <a href="#" class="terms-link">Privacy Policy</a></span>
+                        </label>
+                        <span class="error-message" id="termsError"></span>
+                    </div>
+
+                    <!-- Subscribe Checkbox -->
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter" checked>
+                        <span>Subscribe to student deals and offers</span>
+                    </label>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">🚀 Create Account</button>
+
+                    <!-- Error/Success Message -->
+                    <div class="message-box" id="regMessage"></div>
+                </form>
+
+                <!-- Sign In Link -->
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html" class="auth-link">Sign in here</a></p>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <div class="feature-item">
+                    <span class="feature-icon">🎓</span>
+                    <p><strong>Student Verified</strong> - Only for verified students</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💰</span>
+                    <p><strong>Special Discounts</strong> - Up to 50% off on all products</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <p><strong>Secure Payment</strong> - Safe and encrypted transactions</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="decoration decoration-1"></div>
+        <div class="decoration decoration-2"></div>
+    </div>
+
+    <script src="../Form Handling and Form validation/form-handler.js"></script>
+</body>
+</html>

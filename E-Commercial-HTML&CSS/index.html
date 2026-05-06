@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>StudentVerse Market</title>
+  <script src="products.js" defer></script>
 </head>
 <body style="margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#f0f2f5; color:#1a1a2e;">
 
@@ -21,6 +22,19 @@
       <a href="#digital" style="color:#ccc; text-decoration:none; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:500;">Digital Market</a>
       <a href="#deals"   style="color:#ccc; text-decoration:none; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:500;">Deals</a>
       <a href="#about"   style="color:#ccc; text-decoration:none; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:500;">About</a>
+      
+      <!-- Auth Buttons -->
+      <div id="authButtons" style="display:flex; gap:8px; align-items:center;">
+        <a href="login.html" style="color:#ffffff; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:14px; font-weight:600; background:transparent; border:2px solid #e94560; transition:background 0.2s;">🔓 Login</a>
+        <a href="registration.html" style="color:#ffffff; text-decoration:none; padding:8px 18px; border-radius:20px; font-size:14px; font-weight:600; background:#e94560;">📝 Register</a>
+      </div>
+
+      <!-- User Profile (shown when logged in) -->
+      <div id="userProfile" style="display:none; align-items:center; gap:12px; color:#ffffff;">
+        <span id="userName" style="font-size:14px; font-weight:600;"></span>
+        <button onclick="logoutUser()" style="color:#ffffff; text-decoration:none; padding:8px 16px; border-radius:20px; font-size:14px; font-weight:600; background:#e74c3c; border:none; cursor:pointer; transition:background 0.2s;">🚪 Logout</button>
+      </div>
+
       <a href="#contact" style="color:#ffffff; text-decoration:none; padding:8px 18px; border-radius:20px; font-size:14px; font-weight:600; background:#e94560;">Contact</a>
     </div>
   </nav>
@@ -75,111 +89,10 @@
       <p style="color:#667788; font-size:16px; max-width:500px; margin:0 auto;">Hand-picked essentials every student needs to stay ahead</p>
     </div>
 
-    <div style="display:flex; flex-wrap:wrap; gap:28px; justify-content:center; max-width:1200px; margin:0 auto;">
-
-      <!-- Card 1 -->
-      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08); transition:transform 0.2s;">
-        <div style="height:200px; background:linear-gradient(135deg,#667eea,#764ba2); display:flex; align-items:center; justify-content:center; font-size:64px; position:relative;">
-          🤖
-          <span style="position:absolute; top:12px; right:12px; background:#e94560; color:#fff; font-size:10px; font-weight:700; padding:4px 10px; border-radius:12px;">NEW</span>
-        </div>
-        <div style="padding:22px;">
-          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">AI Tools</p>
-          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">AI Study Assistant Pro</h3>
-          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">Smart notes, summaries & question-answer generation powered by AI.</p>
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
-            <div>
-              <span style="font-size:22px; font-weight:800; color:#e94560;">₹499</span>
-              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹999</span>
-            </div>
-            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">50% OFF</span>
-          </div>
-          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
-        </div>
+    <div id="productsGrid" style="display:flex; flex-wrap:wrap; gap:28px; justify-content:center; max-width:1200px; margin:0 auto;">
+      <div id="productsLoading" style="background:#ffffff; border-radius:18px; width:100%; max-width:500px; padding:30px 24px; box-shadow:0 4px 25px rgba(0,0,0,0.08); text-align:center; color:#667788;">
+        Loading products from PHP + MySQL...
       </div>
-
-      <!-- Card 2 -->
-      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08);">
-        <div style="height:200px; background:linear-gradient(135deg,#f093fb,#f5576c); display:flex; align-items:center; justify-content:center; font-size:64px; position:relative;">
-          💻
-          <span style="position:absolute; top:12px; right:12px; background:#ff9800; color:#fff; font-size:10px; font-weight:700; padding:4px 10px; border-radius:12px;">HOT</span>
-        </div>
-        <div style="padding:22px;">
-          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Coding</p>
-          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">Full Stack Dev Bundle</h3>
-          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">HTML, CSS, JS, React & Node.js project templates with guides.</p>
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
-            <div>
-              <span style="font-size:22px; font-weight:800; color:#e94560;">₹799</span>
-              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹1499</span>
-            </div>
-            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">47% OFF</span>
-          </div>
-          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08);">
-        <div style="height:200px; background:linear-gradient(135deg,#4facfe,#00f2fe); display:flex; align-items:center; justify-content:center; font-size:64px; position:relative;">
-          📚
-        </div>
-        <div style="padding:22px;">
-          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Study</p>
-          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">Smart Study Kit 2026</h3>
-          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">Planner, flashcard deck, revision tracker & Pomodoro timer.</p>
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
-            <div>
-              <span style="font-size:22px; font-weight:800; color:#e94560;">₹299</span>
-              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹599</span>
-            </div>
-            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">50% OFF</span>
-          </div>
-          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08);">
-        <div style="height:200px; background:linear-gradient(135deg,#43e97b,#38f9d7); display:flex; align-items:center; justify-content:center; font-size:64px; position:relative;">
-          🔒
-          <span style="position:absolute; top:12px; right:12px; background:#1a1a2e; color:#fff; font-size:10px; font-weight:700; padding:4px 10px; border-radius:12px;">PRO</span>
-        </div>
-        <div style="padding:22px;">
-          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Security</p>
-          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">Cybersec Crash Course</h3>
-          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">Ethical hacking basics, CTF challenges & security labs.</p>
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
-            <div>
-              <span style="font-size:22px; font-weight:800; color:#e94560;">₹649</span>
-              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹1299</span>
-            </div>
-            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">50% OFF</span>
-          </div>
-          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div style="background:#ffffff; border-radius:18px; width:260px; overflow:hidden; box-shadow:0 4px 25px rgba(0,0,0,0.08);">
-        <div style="height:200px; background:linear-gradient(135deg,#fa709a,#fee140); display:flex; align-items:center; justify-content:center; font-size:64px;">
-          📱
-        </div>
-        <div style="padding:22px;">
-          <p style="margin:0 0 6px; font-size:11px; color:#e94560; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Budget Tech</p>
-          <h3 style="margin:0 0 8px; font-size:17px; font-weight:700; color:#1a1a2e;">Budget Earbuds X1</h3>
-          <p style="margin:0 0 16px; font-size:13px; color:#889; line-height:1.5;">Noise-cancelling, 20hr battery — perfect for long study sessions.</p>
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
-            <div>
-              <span style="font-size:22px; font-weight:800; color:#e94560;">₹899</span>
-              <span style="font-size:13px; color:#aab; text-decoration:line-through; margin-left:6px;">₹1799</span>
-            </div>
-            <span style="background:#e8f5e9; color:#2e7d32; font-size:11px; font-weight:700; padding:4px 10px; border-radius:10px;">50% OFF</span>
-          </div>
-          <button style="width:100%; padding:12px; background:linear-gradient(135deg,#e94560,#c62a47); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer;">🛒 Add to Cart</button>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -463,6 +376,33 @@
       <div style="font-size:40px; margin-bottom:16px;">💬</div>
       <h3 style="color:#ffffff; font-size:22px; font-weight:700; margin:0 0 12px;">Have a custom requirement?</h3>
       <p style="color:#8899aa; font-size:15px; line-height:1.7; margin:0 0 24px;">Need a custom project, bulk order, or college collaboration? Drop a message — we'll respond within 24 hours.</p>
+
+      <form id="marketContactForm" novalidate style="margin:0 auto 18px; max-width:520px; display:flex; flex-direction:column; gap:12px; text-align:left;">
+        <div>
+          <label for="marketContactName" style="display:block; color:#ffffff; font-size:13px; font-weight:600; margin:0 0 6px;">👤 Name</label>
+          <input id="marketContactName" type="text" placeholder="Your name" autocomplete="name" required
+                 style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#ffffff; font-size:14px; outline:none;">
+          <span id="marketContactNameError" style="display:block; min-height:18px; margin-top:6px; font-size:12px; color:#e94560;"></span>
+        </div>
+
+        <div>
+          <label for="marketContactEmail" style="display:block; color:#ffffff; font-size:13px; font-weight:600; margin:0 0 6px;">📧 Email</label>
+          <input id="marketContactEmail" type="email" placeholder="you@example.com" autocomplete="email" required
+                 style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#ffffff; font-size:14px; outline:none;">
+          <span id="marketContactEmailError" style="display:block; min-height:18px; margin-top:6px; font-size:12px; color:#e94560;"></span>
+        </div>
+
+        <div>
+          <label for="marketContactMessage" style="display:block; color:#ffffff; font-size:13px; font-weight:600; margin:0 0 6px;">📝 Message</label>
+          <textarea id="marketContactMessage" placeholder="Write your message..." required
+                    style="width:100%; min-height:110px; resize:vertical; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.06); color:#ffffff; font-size:14px; outline:none;"></textarea>
+          <span id="marketContactMessageError" style="display:block; min-height:18px; margin-top:6px; font-size:12px; color:#e94560;"></span>
+        </div>
+
+        <button type="submit" style="width:100%; padding:14px 18px; border-radius:30px; border:none; background:#e94560; color:#ffffff; font-size:15px; font-weight:800; cursor:pointer;">✉️ Send Message</button>
+        <div id="marketContactFormMessage" style="min-height:18px; margin-top:2px; font-size:13px; color:#c7f9cc;"></div>
+      </form>
+
       <a href="mailto:aryankarna79@gmail.com" style="background:#e94560; color:#fff; text-decoration:none; padding:14px 36px; border-radius:30px; font-size:15px; font-weight:700; display:inline-block;">✉️ Send a Message</a>
     </div>
   </section>
@@ -489,6 +429,7 @@
             <a href="#shop"       style="color:#8899aa; text-decoration:none; font-size:14px;">Shop</a>
             <a href="#categories" style="color:#8899aa; text-decoration:none; font-size:14px;">Categories</a>
             <a href="#digital"    style="color:#8899aa; text-decoration:none; font-size:14px;">Digital Market</a>
+            <a href="../Form%20Handling%20and%20Form%20validation/form-control.html" style="color:#8899aa; text-decoration:none; font-size:14px;">Form Control Panel</a>
           </div>
         </div>
 
@@ -528,6 +469,45 @@
 
     </div>
   </footer>
+
+  <!-- ===== AUTHENTICATION SCRIPT ===== -->
+  <script>
+    // Initialize authentication state on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      checkLoginStatus();
+    });
+
+    // Check login status and update navbar
+    function checkLoginStatus() {
+      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      const authButtons = document.getElementById('authButtons');
+      const userProfile = document.getElementById('userProfile');
+      const userName = document.getElementById('userName');
+
+      if (currentUser) {
+        // User is logged in
+        authButtons.style.display = 'none';
+        userProfile.style.display = 'flex';
+        userName.textContent = `👋 Welcome, ${currentUser.name}!`;
+      } else {
+        // User is not logged in
+        authButtons.style.display = 'flex';
+        userProfile.style.display = 'none';
+      }
+    }
+
+    // Logout function
+    function logoutUser() {
+      if (confirm('Are you sure you want to logout?')) {
+        localStorage.removeItem('currentUser');
+        checkLoginStatus();
+        alert('Logged out successfully!');
+        window.location.reload();
+      }
+    }
+  </script>
+
+  <script src="../Form Handling and Form validation/form-handler.js"></script>
 
 </body>
 </html>

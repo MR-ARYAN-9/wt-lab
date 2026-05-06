@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exercise-1 Menu - Scientific Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark">E1</span>
+          <div>
+            <h1>Exercise-1 Lab</h1>
+            <p>Menu-driven mini apps with a scientific calculator</p>
+          </div>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+          Menu
+        </button>
+      </header>
+
+      <div class="layout">
+        <nav id="menu" class="menu" aria-label="Exercise-1 menu">
+          <button class="menu-item is-active" data-target="home" type="button">Overview</button>
+          <button class="menu-item" data-target="scientific" type="button">Scientific Calculator</button>
+          <button class="menu-item" data-target="tips" type="button">Tips</button>
+        </nav>
+
+        <main class="content">
+          <section id="home" class="panel is-active">
+            <div class="panel-header">
+              <p class="eyebrow">Exercise-1</p>
+              <h2>Start here</h2>
+            </div>
+            <div class="panel-body">
+              <p>
+                This page is structured like a small developer dashboard. Use the menu to switch
+                between sections. The Scientific Calculator is a fully wired module built with
+                JavaScript and a clean component layout.
+              </p>
+              <div class="callout">
+                <h3>What is included</h3>
+                <ul>
+                  <li>Menu-driven navigation with state</li>
+                  <li>Scientific functions and keyboard support</li>
+                  <li>Responsive layout for desktop and mobile</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="scientific" class="panel">
+            <div class="panel-header">
+              <p class="eyebrow">Menu Item</p>
+              <h2>Scientific Calculator</h2>
+            </div>
+            <div class="calculator">
+              <div class="display" aria-live="polite">
+                <div id="expression" class="display-expression">0</div>
+                <div id="result" class="display-result">0</div>
+              </div>
+
+              <div class="calc-controls">
+                <button class="ghost" data-action="clear" type="button">AC</button>
+                <button class="ghost" data-action="backspace" type="button">DEL</button>
+                <button class="ghost" data-action="toggle-angle" type="button" id="angleMode">DEG</button>
+                <button class="ghost" data-action="input" data-value="(" type="button">(</button>
+                <button class="ghost" data-action="input" data-value=")" type="button">)</button>
+              </div>
+
+              <div class="calc-grid" role="group" aria-label="Scientific calculator buttons">
+                <button data-action="function" data-value="sin(" type="button">sin</button>
+                <button data-action="function" data-value="cos(" type="button">cos</button>
+                <button data-action="function" data-value="tan(" type="button">tan</button>
+                <button data-action="function" data-value="log(" type="button">log</button>
+                <button data-action="function" data-value="ln(" type="button">ln</button>
+                <button data-action="function" data-value="sqrt(" type="button">sqrt</button>
+
+                <button data-action="function" data-value="asin(" type="button">asin</button>
+                <button data-action="function" data-value="acos(" type="button">acos</button>
+                <button data-action="function" data-value="atan(" type="button">atan</button>
+                <button data-action="function" data-value="abs(" type="button">abs</button>
+                <button data-action="function" data-value="exp(" type="button">exp</button>
+                <button data-action="operator" data-value="^" type="button">x^y</button>
+
+                <button data-action="number" data-value="7" type="button">7</button>
+                <button data-action="number" data-value="8" type="button">8</button>
+                <button data-action="number" data-value="9" type="button">9</button>
+                <button data-action="operator" data-value="/" type="button">/</button>
+                <button data-action="percent" type="button">%</button>
+                <button data-action="factorial" type="button">!</button>
+
+                <button data-action="number" data-value="4" type="button">4</button>
+                <button data-action="number" data-value="5" type="button">5</button>
+                <button data-action="number" data-value="6" type="button">6</button>
+                <button data-action="operator" data-value="*" type="button">*</button>
+                <button data-action="constant" data-value="pi" type="button">pi</button>
+                <button data-action="constant" data-value="e" type="button">e</button>
+
+                <button data-action="number" data-value="1" type="button">1</button>
+                <button data-action="number" data-value="2" type="button">2</button>
+                <button data-action="number" data-value="3" type="button">3</button>
+                <button data-action="operator" data-value="-" type="button">-</button>
+                <button data-action="constant" data-value="ans" type="button">ANS</button>
+                <button data-action="negate" type="button">+/-</button>
+
+                <button class="span-2" data-action="number" data-value="0" type="button">0</button>
+                <button data-action="number" data-value="." type="button">.</button>
+                <button data-action="operator" data-value="+" type="button">+</button>
+                <button class="span-2 accent" data-action="evaluate" type="button">=</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="tips" class="panel">
+            <div class="panel-header">
+              <p class="eyebrow">Notes</p>
+              <h2>Usage tips</h2>
+            </div>
+            <div class="panel-body">
+              <ul class="tips">
+                <li>Use the menu to switch between sections without reloading the page.</li>
+                <li>Toggle DEG/RAD to control how angles are interpreted.</li>
+                <li>Keyboard input works for numbers, operators, Enter, Backspace, and Escape.</li>
+              </ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

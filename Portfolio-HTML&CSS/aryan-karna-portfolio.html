@@ -554,6 +554,72 @@ text-shadow:0 0 14px var(--cyan);
 }
 #contact a:hover::after{width:100%;}
 
+/* Contact form */
+#contact .contact-form{
+margin-top:24px;
+padding:18px;
+border:1px solid var(--border);
+border-radius:14px;
+background:rgba(255,255,255,.02);
+}
+#contact .field{margin-bottom:14px;}
+#contact label{
+display:block;
+margin-bottom:6px;
+font-size:.78rem;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:var(--muted);
+}
+#contact input,
+#contact textarea{
+width:100%;
+padding:12px 14px;
+border-radius:12px;
+border:1px solid var(--border);
+background:rgba(255,255,255,.03);
+color:var(--text);
+font:inherit;
+cursor:text;
+outline:none;
+transition:border-color .2s var(--ease-out),box-shadow .2s var(--ease-out);
+}
+#contact textarea{min-height:120px;resize:vertical;}
+#contact input:focus,
+#contact textarea:focus{
+border-color:rgba(0,212,255,.45);
+box-shadow:0 0 0 3px rgba(0,212,255,.12);
+}
+#contact .form-error{
+display:block;
+min-height:18px;
+margin-top:6px;
+font-size:.82rem;
+color:var(--pink);
+}
+#contact .form-success{
+margin-top:10px;
+font-size:.9rem;
+color:var(--green);
+}
+#contact button{
+width:100%;
+padding:12px 14px;
+border-radius:12px;
+border:1px solid rgba(0,212,255,.22);
+background:linear-gradient(135deg,rgba(139,61,255,.75),rgba(0,212,255,.65));
+color:#fff;
+font-weight:800;
+letter-spacing:.12em;
+text-transform:uppercase;
+cursor:pointer;
+transition:transform .2s var(--ease-spring),box-shadow .2s;
+}
+#contact button:hover{
+transform:translateY(-2px);
+box-shadow:0 14px 40px rgba(0,212,255,.10);
+}
+
 /* ═══════════════════════════════════════════════════════
    RIPPLE
 ═══════════════════════════════════════════════════════ */
@@ -618,6 +684,7 @@ animation:gradShift 4s linear infinite;
 <li><a href="#projects"><span class="nav-bg"></span>Projects<span class="nav-underline"></span></a></li>
 <li><a href="#education"><span class="nav-bg"></span>Education<span class="nav-underline"></span></a></li>
 <li><a href="#contact"><span class="nav-bg"></span>Contact<span class="nav-underline"></span></a></li>
+<li><a href="../Form%20Handling%20and%20Form%20validation/form-control.html"><span class="nav-bg"></span>Form Control<span class="nav-underline"></span></a></li>
 </ul>
 </nav>
 
@@ -704,6 +771,35 @@ animation:gradShift 4s linear infinite;
 <p><strong>Email:</strong> aryankarna79@gmail.com</p>
 <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aryan-karna-858362315/">linkedin.com/in/aryan-karna-858362315</a></p>
 <p><strong>Instagram:</strong> <a href="https://www.instagram.com/aryankarna_0">@aryankarna_0</a></p>
+
+<form id="portfolioContactForm" class="contact-form" novalidate>
+  <div class="field">
+    <label for="contactName">Name</label>
+    <input id="contactName" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+    <span class="form-error" id="contactNameError"></span>
+  </div>
+
+  <div class="field">
+    <label for="contactEmail">Email</label>
+    <input id="contactEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+    <span class="form-error" id="contactEmailError"></span>
+  </div>
+
+  <div class="field">
+    <label for="contactSubject">Subject</label>
+    <input id="contactSubject" name="subject" type="text" placeholder="What is this about?" required>
+    <span class="form-error" id="contactSubjectError"></span>
+  </div>
+
+  <div class="field">
+    <label for="contactMessage">Message</label>
+    <textarea id="contactMessage" name="message" placeholder="Write your message..." required></textarea>
+    <span class="form-error" id="contactMessageError"></span>
+  </div>
+
+  <button type="submit">Send Message</button>
+  <div class="form-success" id="contactFormMessage"></div>
+</form>
 </section>
 <hr>
 
@@ -714,6 +810,7 @@ animation:gradShift 4s linear infinite;
 <p>&copy; 2026 Aryan Karna. All rights reserved.</p>
 </footer>
 
+<script src="../Form Handling and Form validation/form-handler.js"></script>
 <script>
 /* ════════════════════════════════════════════════
    LOADER with counting percentage

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commercial Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">E-Commercial</div>
+    <nav>
+      <button type="button" onclick="showSection('home')">Home</button>
+      <button type="button" onclick="showSection('cart')">Cart <span id="cart-count" class="badge">0</span></button>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section id="home-section" class="page-section">
+      <div class="intro">
+        <h1>Welcome to E-Commercial</h1>
+        <p id="greeting">Hello! Enter your name to personalize this store.</p>
+        <div class="user-form">
+          <input id="user-name" type="text" placeholder="Your name" />
+          <button id="save-name">Save Name</button>
+        </div>
+        <p class="cookie-note">We use cookies to remember your name and recent visits on this page.</p>
+      </div>
+
+      <div class="section-header">
+        <h2>Featured Products</h2>
+        <button class="primary-button" onclick="showSection('cart')">Go to Cart</button>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <h3>Wireless Headphones</h3>
+          <p class="price">$59.99</p>
+          <div class="card-actions">
+            <button onclick="addToCart('Wireless Headphones', 59.99)">Add to Cart</button>
+            <button class="secondary-button" onclick="showProduct('headphones')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <h3>Smart Speaker</h3>
+          <p class="price">$79.99</p>
+          <div class="card-actions">
+            <button onclick="addToCart('Smart Speaker', 79.99)">Add to Cart</button>
+            <button class="secondary-button" onclick="showProduct('speaker')">View Details</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <h3>Fitness Tracker</h3>
+          <p class="price">$39.99</p>
+          <div class="card-actions">
+            <button onclick="addToCart('Fitness Tracker', 39.99)">Add to Cart</button>
+            <button class="secondary-button" onclick="showProduct('tracker')">View Details</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="product-section" class="page-section hidden">
+      <div class="intro">
+        <h1 id="product-title">Product Details</h1>
+        <p id="product-description">Select a product to see more details.</p>
+        <p id="product-price" class="price"></p>
+      </div>
+
+      <div class="product-actions">
+        <button id="product-add-button" class="primary-button">Add to Cart</button>
+        <button class="secondary-button" onclick="showSection('home')">Back to Shop</button>
+      </div>
+    </section>
+
+    <section id="cart-section" class="page-section hidden">
+      <div class="intro">
+        <h1>Your Cart</h1>
+        <p id="cart-message">Your selected items are listed below.</p>
+      </div>
+
+      <div class="cart-items">
+        <div id="cart-list"></div>
+        <div id="empty-cart" class="empty-message">Your cart is empty. Add items from the shop.</div>
+        <div class="checkout-summary hidden" id="cart-summary">
+          <div>
+            <strong>Total:</strong>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <div class="cart-actions">
+            <button id="clear-cart">Clear Cart</button>
+            <button class="primary-button" id="checkout-button">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

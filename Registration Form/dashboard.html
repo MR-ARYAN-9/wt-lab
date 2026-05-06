@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Exercise 2</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .dashboard-container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+
+        .dashboard-header h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .user-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .user-info p {
+            margin: 10px 0;
+            color: #333;
+            font-size: 1em;
+        }
+
+        .user-info strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .logout-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .session-info {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
+            font-size: 0.9em;
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h2>Dashboard</h2>
+                <p id="welcomeMessage" style="color: #666; font-size: 1.1em;"></p>
+            </div>
+
+            <div class="user-info">
+                <p><strong>Name:</strong> <span id="userName"></span></p>
+                <p><strong>Email:</strong> <span id="userEmail"></span></p>
+                <p><strong>Login Time:</strong> <span id="loginTime"></span></p>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="logout-btn" onclick="logout()">Logout</button>
+                <button class="logout-btn" style="background: #3498db; margin-left: 10px;" onclick="window.location.href='/E-Commercial-HTML%26CSS/index.html'">Go to E-Commerce</button>
+            </div>
+
+            <div class="session-info">
+                <p>✓ You are successfully logged in to your account.</p>
+                <p>Your session will remain active until you logout or close the browser.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="color: #666;">
+                    <a href="index.html" style="color: #667eea; text-decoration: none;">← Back to Home</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/validation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in
+            const session = StorageManager.getSession();
+            
+            if (!session) {
+                // Redirect to login if not logged in
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            // Display user information
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            const userName = document.getElementById('userName');
+            const userEmail = document.getElementById('userEmail');
+            const loginTime = document.getElementById('loginTime');
+            
+            welcomeMessage.textContent = `Welcome, ${session.firstName}!`;
+            userName.textContent = `${session.firstName} ${session.lastName}`;
+            userEmail.textContent = session.email;
+            
+            // Format login time
+            const loginDate = new Date(session.loginTime);
+            loginTime.textContent = loginDate.toLocaleString();
+        });
+        
+        /**
+         * Logout user
+         */
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                StorageManager.clearSession();
+                alert('You have been logged out successfully!');
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>
